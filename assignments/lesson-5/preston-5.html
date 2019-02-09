@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preston Weather</title>
+    <meta name="description" content="Weather page for Preston, Idaho">
+    <link rel="stylesheet"  href="css/normalize.css">
+    <link rel="stylesheet"  media="(max-width:730px)" href="css/small-5.css">
+    <link rel="stylesheet" media="(min-width:731px)" href="css/large-5.css">
+    <link href="https://fonts.googleapis.com/css?family=Fahkwang" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img id="logo" src="images/Logo.png" alt="Neighborhood Weather Logo"/>
+        <div>
+            <h1>Neighborhood Weather</h1>
+            <div class="motto">
+                <p>Today's weather - special delivery</p>
+            </div>
+        </div>
+    </header>
+    <div>
+        <nav class="topnav">
+            <ul class="hiddenMenu">
+                <li><a href="#">
+                    <div class="wholeHamburger">
+                        <div class="hamburgerMenu"></div>
+                        <div class="hamburgerMenu"></div>
+                        <div class="hamburgerMenu"></div>
+                    </div>
+                    <div class="menuTitle">Menu</div></a></li>
+            </ul>
+            <ul class="secretNav">
+                <li><a href="home/">Home</a></li>
+                <li class="selected, currentPage"><a class="currentPage" href="preston-4/">Preston</a></li>
+                <li><a href="sodaSprings/">Soda Springs</a></li>
+                <li><a href="fishHaven/">Fish Haven</a></li>
+                <li><a href="stormCenter/">Storm Center</a></li>
+                <li><a href="gallery/">Gallery</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <section>
+            <h2 class="pageTitle">Preston</h2>    
+            <div id="bigImage">   
+                <img id="sky" src="images/sky.jpg" alt="Beautiful sky"/>
+                <div id="weatherbox">
+                    <h4>Weather Summary</h4>
+                    <p>Temperature</p>
+                    <p>Precipitation</p>
+                    <p>Humidity</p>
+                    <p>Wind</p>
+                    <p>Pollen Count</p>
+                </div>
+            </div> 
+        </section>
+
+        <div class="hidden, fiveDay">
+            <h4 class="hidden" id="forecastTitle">5 Day Forecast</h4>
+            <div class="hidden" id="forecast"><p>Forecast will be put here</p></div>
+        </div>
+        
+        <article class="articleBox">
+            <h3 id="articleTitle">Article Title</h3>
+            <h5 id="authorByline">by author</h5>
+            <img id="articlePic" src="images/lightning.jpg" alt="lightning in darkened sky"/>
+            <p id="articleBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                incididunt ut labore et dolore magna aliqua. Ullamcorper a lacus vestibulum sed 
+                arcu non odio. Aliquam ultrices sagittis orci a. In dictum non consectetur a 
+                erat nam at lectus. Nascetur ridiculus mus mauris vitae ultricies leo integer malesuada. 
+                Massa eget egestas purus viverra accumsan in. Ac tortor vitae purus faucibus ornare 
+                suspendisse sed nisi lacus. Viverra suspendisse potenti nullam ac tortor vitae. 
+                Sed ullamcorper morbi tincidunt ornare. Augue mauris augue neque gravida in fermentum et 
+                sollicitudin ac. Euismod nisi porta lorem mollis aliquam ut. Integer quis auctor elit sed 
+                vulputate.</p>
+        </article>
+
+        <div id="contactArea">
+                <div id="columns">
+                    <div id="column1">
+                        <p>Company Name</p>
+                        <p>Company Address</p>
+                        <p>Company 2nd line Address</p>
+                    </div> 
+                    <div id="column2">
+                        <p>Company Phone Number</p>
+                        <p>Company Email Address</p>
+                        <p>Company Info</p>
+                    </div>
+                </div>
+                <img id="PrestonMap" src="images/PrestonMap.jpg" alt="Map of Preston Area"/>
+        </div>
+    </main>
+    <footer>
+        <p id="copyright">&copy; 2019 Neighborhood Weather</p>
+    </footer>
+</body>
+</html>
