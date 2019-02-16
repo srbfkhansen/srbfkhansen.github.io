@@ -14,6 +14,7 @@ h4 {
     font-size: 23px;
 }
 
+
 /* Styles for header */
 header {
     background-color: #47718a;
@@ -93,7 +94,7 @@ nav button {
     margin: .2rem 2%;
     background-color: transparent;
     border: none;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #fff;
     display: inline-block;
 }
@@ -104,7 +105,7 @@ button:focus {
 
 nav p {
     color: #fff;
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     display: inline-block;
     margin: 0;
 }
