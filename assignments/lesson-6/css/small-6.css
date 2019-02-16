@@ -16,6 +16,7 @@ h4 {
 
 
 /* Styles for header */
+
 header {
     background-color: #47718a;
     text-align: center;
@@ -23,9 +24,10 @@ header {
     border-bottom: 3px solid #2e2c2a;
     border-top: 3px solid #2e2c2a;
 }
+
 header img {
     float: left;
-    margin: 20px 0 0 20px;
+    margin: 35px 0 0 20px;
     width: 100px;
 }
 
