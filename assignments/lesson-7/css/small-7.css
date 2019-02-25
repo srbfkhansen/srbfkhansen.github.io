@@ -19,17 +19,18 @@ h4 {
 
 header {
     background-color: #47718a;
-    text-align: center;
     overflow: hidden;
     border-bottom: 3px solid #2e2c2a;
     border-top: 3px solid #2e2c2a;
+    display: flex;
+    justify-content: center;
 }
 
 header img {
-    float: left;
-    margin: 35px 0 0 20px;
     width: 100px;
+    margin: 15px 0px 0px 0px;
 }
+
 
 header h1 {    
     color: #2e2c2a;
@@ -37,11 +38,15 @@ header h1 {
     font-size: 35px;   
 }
 
-.motto p{
+.motto p {
     font-style: italic;
     color: #b1b0ae;
     margin-left: 90px;
     margin-top: -10px;
+}
+
+.headerItem {
+    text-align: center;
 }
 
 /* Styles for nav bar */
@@ -67,7 +72,11 @@ nav a:link {
 nav a:hover, .hiddenMenu:hover a {
     color:  #8d8c8a;
     text-shadow: 3px 3px 6px #2e2c2a;
-} 
+}
+
+nav a:visited {
+    color: #fff;
+}
 
 nav a:active {
     color: #d8da76;
@@ -266,5 +275,10 @@ figure figcaption {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+#weatherHeader {
+    margin-left: 20px;
+    color: #214459;
 }
 

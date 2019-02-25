@@ -6,41 +6,42 @@
     <title>Preston Weather</title>
     <meta name="description" content="Weather page for Preston, Idaho">
     <link rel="stylesheet"  href="css/normalize.css">
-    <link rel="stylesheet"  media="(max-width:730px)" href="css/small-7.css">
-    <link rel="stylesheet" media="(min-width:731px)" href="css/large-7.css">
+    <link rel="stylesheet"  media="(max-width:700px)" href="css/small-7.css">
+    <link rel="stylesheet"  media="(min-width: 701px) and (max-width: 999px)" href="css/medium-7.css">
+    <link rel="stylesheet" media="(min-width:1000px)" href="css/large-7.css">
     <link href="https://fonts.googleapis.com/css?family=Fahkwang" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <picture>
-            <source srcset="images/logo.png" media="(min-width: 731px)">
-            <img class="headerFlex" id="logo" src="images/smallLogo.png" alt="Neighborhood Weather Logo"/>
-        </picture>
-        <div class="headerFlex">
-            <h1>Neighborhood Weather</h1>
-            <div class="motto">
-                <p>Today's weather - special delivery</p>
+        <header>
+            <picture class="headerItem">
+                <source srcset="images/logo.png" media="(min-width: 731px)">
+                <img id="logo" src="images/smallLogo.png" alt="Neighborhood Weather Logo"/>
+            </picture>
+            <div class="headerItem">
+                <h1>Neighborhood Weather</h1>
+                <div class="motto">
+                    <p>Today's weather - special delivery</p>
+                </div>
             </div>
+        </header>
+        <div>
+            <nav class="topnav">
+                <div class = "wholeHamburger" id="hiddenMenu" onclick="toggleMenu()">
+                    <button>&#9776;</button>
+                    <p>MENU</p>
+                </div>
+                    <ul class="hide" id="primaryNav">
+                        <li><a href="home/">Home</a></li>
+                        <li><a href="preston-7.html">Preston</a></li>
+                        <li><a href="sodaSprings/">Soda Springs</a></li>
+                        <li><a href="fishHaven/">Fish Haven</a></li>
+                        <li><a href="stormCenter/">Storm Center</a></li>
+                        <li class="currentPage"><a href="gallery-7.html">Gallery</a></li>
+                    </ul>
+            </nav>
         </div>
-    </header>
-    <div>
-        <nav class="topnav">
-            <div class = "wholeHamburger" id="hiddenMenu" onclick="toggleMenu()">
-                <button>&#9776;</button>
-                <p>MENU</p>
-            </div>
-                <ul class="hide" id="primaryNav">
-                    <li><a href="home/">Home</a></li>
-                    <li><a href="preston-7.html">Preston</a></li>
-                    <li><a href="sodaSprings/">Soda Springs</a></li>
-                    <li><a href="fishHaven/">Fish Haven</a></li>
-                    <li><a href="stormCenter/">Storm Center</a></li>
-                    <li class="selected, currentPage"><a href="gallery-7.html">Gallery</a></li>
-                </ul>
-        </nav>
-    </div>
     <main>
-        <section>
+        <section id="weatherGallery">
             <h2 id="weatherHeader">Weather Gallery</h2>
 
             <div id="picGallery">
