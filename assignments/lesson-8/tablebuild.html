@@ -15,6 +15,13 @@
         text-align: center;
     }
 
+    caption {
+        background-color: #7fb9c2;
+        font-size: 1.75em;
+        padding: 5px;
+        font-weight: bold;
+    }
+
     table, th, td {
         border: 1px solid #c8ccca;
         border-collapse: collapse;
@@ -28,28 +35,28 @@
         background-color: #7fb9c2;
     }
 
+    tfoot {
+       font-size: .70em;
+    }
+
     th {
         background-color: #628ca6;
         color: #fff;
         padding: 10px;
     }
     
-    table td tr:nth-child(even) {
+    tr:nth-child(odd) {
         background-color: #e7f0ed;
     }
 
-    table td tr:nth-child(odd) {
+    tfoot>tr:nth-child(odd) {
+        background-color: #7fb9c2;
+    }
+
+    tr:nth-child(even) {
         background-color: #e7ffed;
     }
-
-    h2 {
-        font-size: 1.75em;
-    }
-
-    h6 {
-        font-size: .70em;
-    }
-
+    
     th, td {
         padding: 10px;
     }
@@ -65,17 +72,15 @@
 <body>
     <main>
         <table>
+            <caption>ACME Wildwest</caption>
             <thead>
-                <tr>
-                    <td colspan="3"><h2>ACME Wildwest</h2></td>
-                </tr>
-            </thead>
-            <tbody>
                 <tr>
                     <th>Period</th>
                     <th>Sales</th>
                     <th>Sales Goal</th>
                 </tr>
+            </thead>
+            <tbody>
                 <tr>
                     <td>August</td>
                     <td>$3,590</td>
@@ -108,7 +113,7 @@
             </tbody>
             <tfoot>
                 <tr>
-                    <td colspan="3"><h6>Compiled 12.20.2020 by bRauls</h6></td>
+                    <td colspan="3">Compiled 12.20.2020 by bRauls</td>
                 </tr>
             </tfoot>
 
