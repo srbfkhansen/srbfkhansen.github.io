@@ -28,7 +28,7 @@
     request.open('GET', requestURL);
     request.responseType = 'json';
     request.send();
-    
+
     request.onload = function() {
         var superHeroes = request.response;
         populateHeader(superHeroes);
@@ -41,7 +41,7 @@
         header.appendChild(myH1);
 
         var myPara = document.createElement('p');
-        myPara.textContent = 'Hometown: ' + jsonObj['homeTown'] + ' // Formed: ' + jasonObj['formed'];
+        myPara.textContent = 'Hometown: ' + jsonObj['homeTown'] + ' // Formed: ' + jsonObj['formed'];
         header.appendChild(myPara);
     }
 
