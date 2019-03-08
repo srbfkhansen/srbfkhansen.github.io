@@ -11,6 +11,7 @@ body {
 
 h1, h2 {
   font-family: 'Faster One', cursive;
+  color: red;
 }
 
 /* header styles */
@@ -24,6 +25,12 @@ header p {
   font-size: 1.3rem;
   font-weight: bold;
   text-align: center;
+  color: navy;
+  text-shadow: 4px 4px 10px yellow;
+}
+
+p, li {
+    color: navy;
 }
 
 /* section styles */
