@@ -291,7 +291,7 @@ form {
 
 /* Styles for Home Page */
 
-article {
+.homePage article {
     width: 25%;
     text-align: center;
     background-color: #fff;
@@ -300,7 +300,7 @@ article {
     box-shadow: 4px 4px 8px #2e2c2a;
 }
 
-section {
+.homePage section {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -310,11 +310,11 @@ section {
     text-align: center;
 }
 
-section h2 {
+.homePage section h2 {
     color: #214459;
 }
 
-section p {
+.homePage section p {
     width: 70%;
     margin: 10px auto;
 }
@@ -323,7 +323,7 @@ article img {
     width: 100%; 
 }
 
-section p:nth-child(2) {
+.homePage section p:nth-child(2) {
     font-style: italic; 
 }
 

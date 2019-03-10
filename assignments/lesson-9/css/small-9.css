@@ -322,7 +322,7 @@ form {
 
 /* Styles for Home Page */
 
-article {
+.homePage article {
     width: 80%;
     text-align: center;
     background-color: #fff;
@@ -332,7 +332,7 @@ article {
     position: relative;
 }
 
-section {
+.homePage section {
     background-color: #b1b0ae;
     padding: 20px;
 }
@@ -341,21 +341,20 @@ section {
     text-align: center;
 }
 
-section h2 {
+.homePage section h2 {
     color: #214459;
 }
 
-section p {
+.homePagesection p {
     width: 70%;
     margin: 10px auto;
-    position: relative;
 }
 
 article img {
-    width: 100%;    
+    width: 100%;  
 }
 
-section p:nth-child(2) {
+.homePage section p:nth-child(2) {
     font-style: italic; 
 }
 
