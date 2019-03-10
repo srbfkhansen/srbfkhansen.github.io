@@ -41,7 +41,12 @@
             </nav>
         </div>
     <main>
-        
+        <h1 id=townTitle>Our Neighborhood</h1>
+        <section>
+
+        </section>
+
+        <h2 id="currentEvents">Current Events Coming Soon!</h2>
     </main>
 
     <footer>
@@ -50,5 +55,54 @@
     </footer>
     <script src="scripts/currentdate.js"></script>
     <script src="scripts/hamburger.js"></script>
+    <script>
+        var section = document.querySelector('section');
+    
+        var requestURL = 'https://byui-cit230.github.io/weather/data/towndata.json';
+        var request = new XMLHttpRequest();
+        request.open('GET', requestURL);
+        request.responseType = 'json';
+        request.send();
+    
+        request.onload = function() {
+            var townInformation = request.response;
+            showTowns(townInformation);
+        }
+   
+        function showTowns(jsonObj) {
+            var towns = jsonObj['towns'];
+            var urls = { 'Preston': 'images/preston.jpg', 'Soda Springs': 'images/sodaSprings.jpg', 'Fish Haven': 'images/fishHaven.jpg'};
+
+            for (var index = 0; index < towns.length; index++) {
+                if (towns[index].name == "Preston" || towns[index].name == "Soda Springs" || towns[index].name == "Fish Haven") {
+                    // towns[index] is my item.
+                    var article = document.createElement('article');
+                    var header = document.createElement('h2');
+                    var p1 = document.createElement('p');
+                    var p2 = document.createElement('p');
+                    var p3 = document.createElement('p');
+                    var p4 = document.createElement('p');
+                    var image = document.createElement('img');
+
+                    header.textContent = towns[index].name;
+                    p1.textContent = towns[index].motto;
+                    p2.textContent = 'Year Founded: ' + towns[index].yearFounded;
+                    p3.textContent = 'Population: ' + towns[index].currentPopulation;
+                    p4.textContent = 'Annual Rain Fall:' + towns[index].averageRainfall;
+                    image.src = urls[towns[index].name]; 
+        
+                    article.appendChild(header);
+                    article.appendChild(p1);
+                    article.appendChild(p2);
+                    article.appendChild(p3);
+                    article.appendChild(p4);
+                    article.appendChild(image);
+        
+                    section.appendChild(article);
+                }
+            }
+        }
+    
+        </script>
 </body>
 </html>
