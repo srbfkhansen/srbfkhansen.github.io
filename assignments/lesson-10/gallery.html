@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preston Weather</title>
+    <meta name="description" content="Weather page for Preston, Idaho">
+    <link rel="stylesheet"  href="css/normalize.css">
+    <link rel="stylesheet"  media="(max-width:700px)" href="css/small-10.css">
+    <link rel="stylesheet"  media="(min-width: 701px) and (max-width: 999px)" href="css/medium-10.css">
+    <link rel="stylesheet" media="(min-width:1000px)" href="css/large-10.css">
+    <link href="https://fonts.googleapis.com/css?family=Fahkwang" rel="stylesheet">
+</head>
+<body>
+        <header>
+            <picture class="headerItem">
+                <source srcset="images/logo.png" media="(min-width: 731px)">
+                <img id="logo" src="images/smallLogo.png" alt="Neighborhood Weather Logo"/>
+            </picture>
+            <div class="headerItem">
+                <h1>Neighborhood Weather</h1>
+                <div class="motto">
+                    <p>Today's weather - special delivery</p>
+                </div>
+            </div>
+        </header>
+        <div>
+            <nav class="topnav">
+                <div class = "wholeHamburger" id="hiddenMenu" onclick="toggleMenu()">
+                    <button>&#9776;</button>
+                    <p>MENU</p>
+                </div>
+                    <ul class="hide" id="primaryNav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="preston.html">Preston</a></li>
+                        <li><a href="sodaSprings/">Soda Springs</a></li>
+                        <li><a href="fishHaven/">Fish Haven</a></li>
+                        <li><a href="stormcenter.html">Storm Center</a></li>
+                        <li class="currentPage"><a href="gallery.html">Gallery</a></li>
+                    </ul>
+            </nav>
+        </div>
+    <main>
+        <section id="weatherGallery">
+            <h2 id="weatherHeader">Weather Gallery</h2>
+
+            <div id="picGallery">
+                <figure class="galleryBox">
+                    <img class="galleryPic" src="images/lake.jpg" alt="lake at sunset"/>
+                    <figcaption>Local lake at dusk</figcaption>
+                </figure>
+                
+                <figure class="galleryBox">
+                    <img class="galleryPic" src="images/rainbow.jpg" alt="rainbow over road"/>
+                    <figcaption>Rainbow over road</figcaption>
+                </figure>
+
+                <figure class="galleryBox">
+                    <img class="galleryPic" src="images/lightning.jpg" alt="lightning in purple sky"/>
+                    <figcaption>Night lightning in country</figcaption>
+                </figure>
+                            
+                <figure class="galleryBox">
+                    <img class="galleryPic" src="images/fog.jpg" alt="fog among pine trees"/>
+                    <figcaption>Fog on the mountain</figcaption>
+                </figure>
+                
+                <figure class="galleryBox">
+                    <img class="galleryPic" src="images/snow.jpg" alt="snow on mountain top"/>
+                    <figcaption>Snow covered mountain top</figcaption>
+                </figure>
+                
+                <figure class="galleryBox">
+                    <img class="galleryPic" src="images/sunset.jpg" alt="beautiful cloudy sky at sunset with orange and yellow colors"/>
+                    <figcaption>Brilliant local sunset</figcaption>
+                </figure>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p id="currentDate"></p>
+        <p id="copyright">&copy; 2019 Neighborhood Weather</p>
+    </footer>
+    <script src="scripts/currentdate.js"></script>
+    <script src="scripts/hamburger.js"></script>
+</body>
+</html>
