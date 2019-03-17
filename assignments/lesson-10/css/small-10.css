@@ -142,7 +142,7 @@ nav ul.hide {
 
 /* Styles for Footer */
 
-#copyright, #currentDate {
+#copyright, #currentDate, #attribution {
     color: #fff;
     text-align: center;
 }
@@ -153,6 +153,11 @@ footer {
     padding: 10px 5px;
     border-bottom: 3px solid #2e2c2a;
     border-top: 3px solid #2e2c2a;
+}
+
+#attribution a {
+    text-decoration: underline;
+    color: #fff;
 }
 
 /* Styles for Preston Weather Page */
@@ -211,6 +216,7 @@ h4 {
 
 #articleBody {
     margin: 2% 2%;
+    text-align: left;
 }
 
 #PrestonMap {

@@ -24,7 +24,7 @@ function ConvertWindChill(aTemperature, aSpeed) {
     return Math.round(result * 100) / 100;
 }
 
-UpdateWindChill("temp", "speed", "windChill"); // Function that starts the calculation of wind chill factor for weather summary.
+//UpdateWindChill("highTemp", "speed", "windChill"); // Function that starts the calculation of wind chill factor for weather summary.
 
 
 
