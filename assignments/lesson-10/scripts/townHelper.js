@@ -1,6 +1,7 @@
 /**
- * 
- * @param {*} jsonObj 
+ * Function that locates desired towns from JSON object.
+ * Sets up Html article to hold town information.
+ * @param {Object} jsonObj 
  */
 function ShowTownInfo(jsonObj, aDomSection) {
     var towns = jsonObj['towns'];
@@ -9,31 +10,55 @@ function ShowTownInfo(jsonObj, aDomSection) {
     for (var index = 0; index < towns.length; index++) {
         if (towns[index].name == "Preston" || towns[index].name == "Soda Springs" || towns[index].name == "Fish Haven") {
             // towns[index] is my item.
-            var article = document.createElement('article');
-            var header = document.createElement('h2');
-            var p1 = document.createElement('p');
-            var p2 = document.createElement('p');
-            var p3 = document.createElement('p');
-            var p4 = document.createElement('p');
-            var image = document.createElement('img');
-
-            header.textContent = towns[index].name;
-            p1.textContent = towns[index].motto;
-            p2.textContent = 'Year Founded: ' + towns[index].yearFounded;
-            p3.textContent = 'Population: ' + towns[index].currentPopulation;
-            p4.textContent = 'Annual Rain Fall:' + towns[index].averageRainfall;
-            image.src = urls[towns[index].name]; 
-
-            article.appendChild(header);
-            article.appendChild(p1);
-            article.appendChild(p2);
-            article.appendChild(p3);
-            article.appendChild(p4);
-            article.appendChild(image);
+            var article = document.createElement('article'); // Html element that will contain town information.
+            
+            var article = CreateTownInfoElement(towns[index], urls[towns[index].name]);
 
             aDomSection.appendChild(article);
         }
     }
+}
+
+/**
+ * Function that creates town information display and sends back.
+ * Display includes town name, motto, year founded, annual rain fall, and image.
+ * @param {String} aTown Name of town passed in.
+ * @param {String} aImageUrl String from which the town image URL can be constructed.
+ */
+function CreateTownInfoElement(aTown, aImageUrl) {
+   var result = document.createElement('article'); // Send town info display results back to Html article.
+
+   // Create, populate, and add header to the article.
+   var header = document.createElement('h2');
+   header.textContent = aTown.name;
+   result.appendChild(header);
+
+   // Create, populate, and add motto to the article.
+   var p1 = document.createElement('p');
+   p1.textContent = aTown.motto;
+   result.appendChild(p1);
+
+   // Create, populate, and add year founded to the article
+   var p2 = document.createElement('p');
+   p2.textContent = 'Year Founded: ' + aTown.yearFounded;
+   result.appendChild(p2);
+
+   // Create, populate, and add town population to the article
+   var p3 = document.createElement('p');
+   p3.textContent = 'Population: ' + aTown.currentPopulation;
+   result.appendChild(p3);
+
+   // Create, populate, and add town population to the article
+   var p4 = document.createElement('p');
+   p4.textContent = 'Annual Rain Fall:' + aTown.averageRainfall;
+   result.appendChild(p4);
+
+   // Create, populate, and add town image to the article   
+   var image = document.createElement('img');
+   image.src = aImageUrl; 
+   result.appendChild(image);
+
+   return result;
 }
 
 
@@ -58,7 +83,3 @@ function ShowTownEvents(aTownInformation, aTownName, aDomSection) {
     }
 }
         
-// There is an array - you want to do something with the items in the array. Call the array myList.
-// for (var xcvb = 0; xcvb < myList.length; xcvb++) {
-    // var myItem = myList[xcvb];
-//}

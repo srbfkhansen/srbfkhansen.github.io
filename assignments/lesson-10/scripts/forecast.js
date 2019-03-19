@@ -3,39 +3,72 @@ let apiURLforecastString = 'https://api.openweathermap.org/data/2.5/forecast?id=
 forecastRequest.open('Get', apiURLforecastString, true);
 forecastRequest.send();
 
+/**
+ * Called once the forecast request is finished.
+ * Creates JSON object - forecastData to be used to gather town information.
+ * Creates section in Html for daily forecast to be displayed.
+ * Calls function for CreateFiveDayForecast
+ */
 forecastRequest.onload = function() {
-    let forecastData = JSON.parse(forecastRequest.responseText);
-    // console.log(forecastData);
+   let forecastData = JSON.parse(forecastRequest.responseText);
+   // console.log(forecastData);
 
-    var section = document.getElementById('dailyForecast');
+   var section = document.getElementById('dailyForecast'); // Name section forecast will be displayed in.
+   CreateFiveDayForecast(forecastData, section); // Call function that will create the five day forecast.
+}
 
-    var index = 0; // First record.
-    while (!forecastData.list[index].dt_txt.includes("18:00:00")) index++; // Advance forecast records until 6pm.
-    var day = (new Date(forecastData.list[index].dt_txt).getDay()) % 7; // This is the first matching item's day.
+/**
+ * Creates five day forecast using JSON object and sends to Html.
+ * @param {Object} aForecastData 
+ * @param {HTMLElement} aParentElement 
+ */
+function CreateFiveDayForecast(aForecastData, aParentElement) {
+   var index = 0; // First record.
+   while (!aForecastData.list[index].dt_txt.includes("18:00:00")) index++; // Advance forecast records until 6pm.
+   
+   for (var offset = 0; offset < 5; offset++) { // Five days of input expected (or function will break).
+      var day = (new Date(aForecastData.list[index].dt_txt).getDay()) % 7; // This is the forecast item's day (by index with Sunday: 0).
+      var article = CreateForecastElement(day, aForecastData.list[index].weather[0].icon, aForecastData.list[index].weather[0].description, Math.round(aForecastData.list[index].main.temp)); // Call function that will create Html parent article.
+      aParentElement.appendChild(article); // Add the forecast to the Html parent.
 
-    for (var offset = 0; offset < 5; offset++) { // Five days of input expected (or this thing will break).
-        var article = document.createElement('article');
-        var header = document.createElement('h4');
-        var image = document.createElement('img');
-        var para = document.createElement('p');
-        
-        header.textContent = GetDayName(day);
+      index += 8; // Each day is 8 records apart.
+   }
+}
 
-        image.src = "http://openweathermap.org/img/w/" + forecastData.list[index].weather[0].icon + ".png";  
-        image.alt = forecastData.list[index].weather[0].description;
+/**
+ * Create a forecast Html section that can be added to an Html parent as needed.
+ * @param {Number} aDay Index indicating the day of the week. 0: Sunday, 6: Saturday.
+ * @param {String} aIconId String from which a URL can be constructed for displaying weather status: "http://openweathermap.org/img/w/" + aIconId + ".png"
+ * @param {String} aIconDescription Alternate text to use if the weather icon is not displayed.
+ * @param {Number} aTemperature Temperature in fahrenheit forcasted.
+ * @returns {HTMLElement} An Html "Article" containing the forecast Html elements.
+ */
+function CreateForecastElement(aDay, aIconId, aIconDescription, aTemperature) {
+   // Create the following using the document:
+   //    <article>
+   //        <h4 class="forecast">Three-letter-versionof(aDay)</h4>
+   //        <img src="http://openweathermap.org/img/w/aIconId.png" alt="aIconDescription" />
+   //        <p>aTemperature\u00b0 F</p>
+   //    </article>
+   var result = document.createElement('article'); // This Html element will contain all the forecast components.
 
-        para.textContent = Math.round(forecastData.list[index].main.temp) + "\u00B0 F";
+   // Add the header (h4).
+   var header = document.createElement('h4'); // Create header variable and set it up in the Html.
+   header.textContent = GetDayName(aDay); // Call GetDayName function to display day of the week in relation to the the index number - 0: Sunday, 6: Saturday.
+   result.appendChild(header); // Send header results to Html article.
 
-        article.appendChild(header);
-        article.appendChild(image);
-        article.appendChild(para);
+   // Create, populate, and add the image to the article.
+   var image = document.createElement('img');
+   image.src = "http://openweathermap.org/img/w/" + aIconId + ".png";  
+   image.alt = aIconDescription;
+   result.appendChild(image);
 
-        section.appendChild(article);
+   // Create, populate, and add the paragraph containing the temperature to the article.
+   var paragraph = document.createElement('p');
+   paragraph.textContent = aTemperature + "\u00B0 F";
+   result.appendChild(paragraph);
 
-        day = (day + 1) % 7; // Move to next day for text display.
-        index += 8; // Each day is 8 records apart.
-    }
-
+   return result;
 }
 
 /**

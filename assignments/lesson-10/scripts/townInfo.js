@@ -4,7 +4,12 @@ request.open('GET', requestURL);
 request.responseType = 'json';
 request.send();
 
-// On load run these two functions.
+/**
+ * On load set up Html section for towns. 
+ * Request town information and hold in a JSON object - townInformation.
+ * Call ShowTownInfo function which will display town info on home page. 
+/**
+ */
 request.onload = function() {
     var townSection = document.getElementById('localTowns'); // Grab section from the DOM for town information display.
 
