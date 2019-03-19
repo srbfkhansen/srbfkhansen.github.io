@@ -5,15 +5,13 @@ forecastRequest.send();
 
 forecastRequest.onload = function() {
     let forecastData = JSON.parse(forecastRequest.responseText);
-    console.log(forecastData);
-
-    var day = (new Date().getDay() + 1) % 7; // This is tomorrow's day.
+    // console.log(forecastData);
 
     var section = document.getElementById('dailyForecast');
 
     var index = 0; // First record.
-    while (day != new Date(forecastData.list[index].dt_txt).getDay()) index++; // Advance forecast records until tomorrow.
     while (!forecastData.list[index].dt_txt.includes("18:00:00")) index++; // Advance forecast records until 6pm.
+    var day = (new Date(forecastData.list[index].dt_txt).getDay()) % 7; // This is the first matching item's day.
 
     for (var offset = 0; offset < 5; offset++) { // Five days of input expected (or this thing will break).
         var article = document.createElement('article');
@@ -40,6 +38,11 @@ forecastRequest.onload = function() {
 
 }
 
+/**
+ * Convert the day of the week index in [0, 6] to a three letter string representation.
+ * @param {Number} aDay Day of the week index where 0 is Sunday and 6 is Saturday.
+ * @returns {String} Three letter string representing the day of the week.
+ */
 function GetDayName(aDay) {
     var result = "MON"; // Day of the week text. Default is Monday.
     switch (aDay % 7) { // Keep day in the range of [0] to [6].
