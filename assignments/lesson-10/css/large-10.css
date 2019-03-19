@@ -37,7 +37,7 @@ header h1 {
 
 .motto p {
     font-style: italic;
-    color: #b1b0ae;
+    color: #babbbc;
     margin-left: 90px;
     margin-top: -10px;
 }
@@ -244,7 +244,8 @@ h4 {
 
 .townSection {
     text-align: center;
-    width: 100%;
+    width: 96.7%;
+    margin: 0 auto;
     color: #babbbc;
     background-color: #214459;
     border: 2px solid #2e2c2a;
