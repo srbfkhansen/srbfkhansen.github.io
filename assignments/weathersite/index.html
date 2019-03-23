@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neighborhood Weather - Current weather, News, Town Info, and Five-Day Forecast</title>
+    <meta name="description" content="Overview of local Idaho towns on Neighborhood Weather. Includes town information for Preston, Soda Springs, and Fish Haven">
+    <link rel="stylesheet"  href="css/normalize.css">
+    <link rel="stylesheet"  media="(max-width:700px)" href="css/small.css">
+    <link rel="stylesheet"  media="(min-width: 701px) and (max-width: 999px)" href="css/medium.css">
+    <link rel="stylesheet" media="(min-width:1000px)" href="css/large.css">
+    <link href="https://fonts.googleapis.com/css?family=Fahkwang" rel="stylesheet">
+</head>
+<body>
+        <header>
+            <picture class="headerItem">
+                <source srcset="images/logo.png" media="(min-width: 731px)">
+                <img id="logo" src="images/smallLogo.png" alt="Neighborhood Weather Logo"/>
+            </picture>
+            <div class="headerItem">
+                <h1>Neighborhood Weather</h1>
+                <div class="motto">
+                    <p>Today's weather - special delivery</p>
+                </div>
+            </div>
+        </header>
+        <div>
+            <nav class="topnav">
+                <div class = "wholeHamburger" id="hiddenMenu" onclick="toggleMenu()">
+                    <button>&#9776;</button>
+                    <p>MENU</p>
+                </div>
+                    <ul class="hide" id="primaryNav">
+                        <li class="currentPage"><a href="index.html">Home</a></li>
+                        <li><a href="preston.html">Preston</a></li>
+                        <li><a href="sodaSprings.html">Soda Springs</a></li>
+                        <li><a href="fishHaven.html">Fish Haven</a></li>
+                        <li><a href="stormcenter.html">Storm Center</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+            </nav>
+        </div>
+    <main class="homePage">
+        <h1 id=townTitle>Our Neighborhood</h1>
+        <section id="localTowns">
+
+        </section>
+    </main>
+
+    <footer>
+        <p id="currentDate"></p>
+        <p id="copyright">&copy; 2019 Neighborhood Weather</p>
+    </footer>
+    <script src="scripts/currentdate.js"></script>
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/townHelper.js"></script>
+    <script src="scripts/townInfo.js"></script>
+</body>
+</html>
