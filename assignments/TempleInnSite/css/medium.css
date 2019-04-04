@@ -1,0 +1,251 @@
+/* General styling for website */
+
+h1, h2 {
+   font-family: Merriweather, serif;
+   font-weight: lighter;
+} 
+
+a {
+   text-decoration: none;
+   color: #262626;
+}
+
+/* Styling for header */
+
+header {
+   display: flex;
+   justify-content: center;
+   justify-content: space-evenly;
+}
+
+#pageTop {
+   background-color: #7ea1b4;
+   border-bottom: 1px solid #262626;
+   border-top: 1px solid #262626;
+   width: 100%;
+}
+
+#logo {
+   font-family: Great Vibes, serif;
+   font-size: 60px;
+   margin-left: 30px;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   color: #262626;
+   text-decoration: none;
+}
+/* Styles for nav bar */
+
+.currentPage a {
+   background-color: #4e7286;
+   color: #bfbfbf;
+}
+
+.currentPage a:hover {
+   color: #bfbfbf;
+}
+
+ul {
+   margin: 0;
+}
+
+nav ul {
+   list-style-type: none;
+   padding: 0;
+}
+
+nav a:link {
+   font-family: Merriweather, serif;
+   text-decoration: none;
+   background-color: #bfbfbf;
+   color: #262626;
+   font-size: 16px;
+   text-transform: uppercase;
+   text-align: center;
+}
+
+nav a:hover, .hiddenMenu:hover a {
+   color:  #4e7286;
+   text-shadow: 1px 1px .5px #5d5d5d;
+}
+
+nav a:active {
+   color: #7c2d47;
+}
+
+nav ul li .selected {
+   color: #7c2d47;
+   padding: 10px;
+}
+
+nav ul li a {
+   display: block;
+   padding: .8rem 2%;
+   border-top: 1px solid #262626;
+}
+
+#lastNavItem {
+   border-bottom: 1px solid #262626;
+}
+
+#primaryNav {
+   position: center;
+   top: 10%;
+}
+
+/* Styles for Hamburger Nav Menu */
+
+nav button {
+   margin: .2rem 2%;
+   background-color: transparent;
+   border: none;
+   font-size: 2rem;
+   color: #262626;
+   display: inline-block;
+}
+
+button:focus {
+   outline: 0;
+}
+
+nav p {
+   color: #262626;
+   font-size: 1.3rem;
+   display: inline-block;
+   margin: 0;
+}
+
+nav button:hover, nav p:hover {
+   color:  #4e7286;
+   text-shadow: 1px 1px .5px #5d5d5d;
+   text-decoration: none;
+}
+
+.wholeHamburger {
+   position: absolute;
+   right: 10%;
+   top: 2%;
+   overflow: hidden;
+}
+
+nav ul.hide {
+   display: none;
+}
+
+/* General Styling for body */
+
+body {
+   font-family: Open Sans, sans-serif;
+}
+ 
+
+/* General Styling for footer */
+
+footer {
+   background-color: #bfbfbf;
+   border-top: 2px solid #5d5d5d;
+   padding-bottom: 15px;
+}
+
+footer p {
+   text-align: center;
+}
+
+footer a {
+   color: #4e7286;
+   text-decoration: underline;
+}
+
+/* Styling for Home Page */
+
+#hotelRoom {
+   width: 100%;
+}
+
+section {
+   width: 100%;
+}
+
+.columns {
+   display: flex;
+   justify-content: space-around; 
+}
+
+.picCaption {
+   font-size: 80%;
+   display: block;
+   margin: 2% 2%;
+}
+
+.columns figure {
+   border-radius: 11%;
+   background-color: #bfbfbf;
+   font-family: Merriweather, serif;
+   text-align: center;  
+   width: 45%; 
+   box-shadow: 2px 2px 6px 2px #262626;
+}
+
+
+.columns img {
+   border-top-left-radius:11%;
+   border-top-right-radius:11%;
+   width: 100%;
+}
+
+
+.button {
+   border-radius: 10px;
+   background-color: #bfbfbf;
+   text-align: center;
+   width: 225px;
+   margin: 20px auto;
+   padding: 10px;
+   display: flex;
+   justify-content: center;
+   text-decoration: none;
+   font-weight: 900;
+}
+
+.button a:hover {
+   color: #4e7286;
+}
+
+#tagLine {
+   display: flex;
+   justify-content: center;
+   margin: 20px auto;
+   font-size: 20px;
+   font-weight: lighter;
+}
+
+#featuredTemple {
+   background-color: #7ea1b4;
+   border-top: 2px solid #5d5d5d;
+   border-bottom: 2px solid #5d5d5d;
+   display: flex;
+   justify-content: center;
+}
+
+#featuredColumn1 {
+   display: flex;
+   justify-content: space-around;
+   padding: 20px;
+   margin-top: 10px;
+}
+
+#featuredColumn1 img {
+   border: 1px solid #5d5d5d;
+   border-radius: 8px;
+}
+
+#featuredColumn2 {
+   display: flex;
+   flex-direction: column;
+   margin-left: 50px;
+   margin-top: 10px;
+}
+
+#call h2 {
+   text-align: center;
+}
