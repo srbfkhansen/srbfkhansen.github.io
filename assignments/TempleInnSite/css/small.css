@@ -10,6 +10,7 @@ a {
    color: #262626;
 }
 
+
 /* Styling for header */
 
 header {
@@ -34,6 +35,7 @@ header {
    color: #262626;
    text-decoration: none;
 }
+
 
 /* Styles for nav bar */
 
@@ -96,6 +98,7 @@ nav ul li a {
    top: 10%;
 }
 
+
 /* Styles for Hamburger Nav Menu */
 
 nav button {
@@ -135,6 +138,7 @@ nav ul.hide {
    display: none;
 }
 
+
 /* General Styling for body */
 
 body {
@@ -158,6 +162,7 @@ footer a {
    color: #4e7286;
    text-decoration: underline;
 }
+
 
 /* Styling for Home Page */
 
@@ -254,6 +259,7 @@ footer a {
    text-align: center;
 }
 
+
 /* Resource Page Styling */
 
 .centerPage {
@@ -307,6 +313,7 @@ footer a {
    width: 150px;
    padding: 10px;
 }
+
 
 /* Services Page Styling */
 
@@ -396,7 +403,6 @@ footer a {
 .formBox input, textarea {
    padding: 5px;
    margin: 5px;
-   
 }
 
 #commentBox {
@@ -407,6 +413,7 @@ footer a {
 .inputLength input {
    width: 95%;
 }
+
 
 /* Temples Page Styling */
 

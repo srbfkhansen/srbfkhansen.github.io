@@ -10,6 +10,7 @@ a {
    color: #262626;
 }
 
+
 /* Styling for header */
 
 header {
@@ -34,6 +35,8 @@ header {
    color: #262626;
    text-decoration: none;
 }
+
+
 /* Styles for nav bar */
 
 .currentPage a {
@@ -93,6 +96,7 @@ nav ul li a {
    top: 10%;
 }
 
+
 /* Styles for Hamburger Nav Menu */
 
 nav button {
@@ -132,6 +136,7 @@ nav ul.hide {
    display: none;
 }
 
+
 /* General Styling for body */
 
 body {
@@ -155,6 +160,7 @@ footer a {
    color: #4e7286;
    text-decoration: underline;
 }
+
 
 /* Styling for Home Page */
 
@@ -186,13 +192,11 @@ footer a {
    box-shadow: 2px 2px 6px 2px #262626;
 }
 
-
 .columns img {
    border-top-left-radius:11%;
    border-top-right-radius:11%;
    width: 100%;
 }
-
 
 .button {
    border-radius: 10px;
@@ -342,6 +346,7 @@ footer a {
    width: 95%;
 }
 
+
 /* Reception Page Styling */
 
 #receptionBox {
@@ -403,6 +408,7 @@ footer a {
 .inputLength input {
    width: 93%;
 }
+
 
 /* Temples Page Styling */
 

@@ -1,6 +1,5 @@
 /* General styling for pages */
 
-
 #hiddenMenu {
    display: none;
 }
@@ -86,12 +85,15 @@ a {
    color: #262626;
 }
 
+
 /* Styling for drop down menu */
+
 
 /* Dropdown container */
 .dropdown {
 	display: inline-block;
 }
+
 
 /* Dropdown button styling */
 .dropdown .dropbtn {
@@ -103,6 +105,7 @@ a {
 	font-family: inherit;
 }
 
+
 /* Dropdown content - hiding */
 .dropdown-content {
 	display: none;
@@ -113,6 +116,7 @@ a {
 	box-shadow: 0px 0px 5px #5d5d5d;
 }
 
+
 /* Links within the dropdown */
 .dropdown-content a {
 	float: none;
@@ -122,10 +126,12 @@ a {
 	text-align: left;
 }
 
+
 /* Show dropdown menu on hover */
 .dropdown:hover .dropdown-content {
 	display: block;
 }
+
 
 /* General Styling for body */
 
@@ -140,6 +146,7 @@ body {
    font-size: 1.5em;
    font-weight: lighter;
 }
+
 
 /* General Styling for footer */
 
@@ -180,7 +187,7 @@ footer a {
 }
 
 .columns figure {
-   border-radius: 30px;
+   border-radius: 11%;
    background-color: #bfbfbf;
    font-family: Merriweather, serif;
    text-align: center;  
@@ -188,13 +195,11 @@ footer a {
    box-shadow: 2px 2px 6px 2px #262626;
 }
 
-
 .columns img {
    border-top-left-radius:11%;
    border-top-right-radius:11%;
    width: 100%;
 }
-
 
 .button {
    border-radius: 10px;
@@ -243,6 +248,7 @@ footer a {
 #call h2 {
    text-align: center;
 }
+
 
 /* Resource Page Styling */
 
@@ -297,6 +303,7 @@ footer a {
    width: 150px;
    padding: 10px;
 }
+
 
 /* Services Page Styling */
 
@@ -358,6 +365,7 @@ footer a {
    text-align: left;
    width: 100%;
 }
+
 
 /* Reservations Page Styling */
 
