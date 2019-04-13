@@ -169,7 +169,7 @@ footer a {
    font-weight: lighter;
 }
 
-#hotelRoom {
+#mainHotelRoom {
    width: 100%;
 }
 
@@ -303,6 +303,10 @@ footer a {
    padding: 30px 0px;
 }
 
+#contactSubmit {
+   width: 150px;
+   padding: 10px;
+}
 
 /* Services Page Styling */
 
@@ -422,4 +426,9 @@ footer a {
    width: 90%;
    margin: 0px auto;
    text-align: center;
+}
+
+#templePage a {
+   color: #4e7286;
+   text-decoration: underline;
 }
