@@ -169,7 +169,7 @@ footer a {
 #tagLine {
    display: flex;
    justify-content: center;
-   margin: 20px auto;
+   margin: 20px 20px;
    font-size: 20px;
    font-weight: lighter;
 }
